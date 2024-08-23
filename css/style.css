@@ -62,7 +62,7 @@ body {
   gap: 40px
 }
 
-.header img {
+img {
   width: 40px;
   height: 40px;
 }
@@ -102,4 +102,11 @@ body {
 .user-info .user-buttons {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+}
+
+.sidebar > .dashboard-logo,
+.sidebar > .primary-options > *,
+.sidebar > .secondary-options > * {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
 }
