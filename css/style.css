@@ -28,9 +28,10 @@ body {
 }
 
 .header {
-  background-color: lightcoral;
+  background-color: white;
   display: grid;
-  grid-template-rows: 3fr 5fr;
+  grid-template-rows: 70px 60px;
+  padding: 20px;
 }
 
 .sidebar {
@@ -51,7 +52,6 @@ body {
   grid-row: 1 / 3;
 }
 
-.header > *,
 .sidebar > *,
 .main-content > * {
   border: 2px solid gray;
@@ -59,7 +59,9 @@ body {
 
 .header-top {
   display: flex;
-  gap: 40px
+  margin-bottom: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 img {
@@ -71,16 +73,24 @@ img {
   flex: 2;
   display: flex;
   gap: 20px;
+  align-items: center;
 }
 
 .search-bar input {
   flex: 4;
+  height: 10px;
+  border-radius: 13px;
+  background-color: rgba(204, 206, 209, 0.2);
+  border: 1px solid;
+  padding: 20px;
+  font-size: 16px;
 }
 
 .header .info-bar {
   flex: 1;
   display: flex;
   gap: 20px;
+  justify-content: flex-end;
 }
 
 .user-info {
@@ -90,18 +100,43 @@ img {
 
 .user-info .user-profile {
   display: grid;
-  grid-template: 1fr 1fr / 1fr 3fr;
+  grid-template: 0.1fr 0.1fr / 0.5fr 3fr;
 }
 
 .user-profile img {
-  height: 80px;
-  width: 80px;
+  height: 60px;
+  width: 60px;
   grid-row: 1 / 3;
+}
+
+.user-info .username {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.user-info .greeting {
+  align-self: end;
 }
 
 .user-info .user-buttons {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template: 0.1fr / 1fr 1fr;
+  gap: 40px;
+}
+
+.user-buttons button {
+  height: 60px;
+  width: 160px;
+  border: 1px solid;
+  border-radius: 10px;
+  background-color: lightseagreen;
+  color: white;
+  font-size: 16px;
+  font-family: bold;
+}
+
+.user-buttons button[class="new"] {
+  justify-self: end;
 }
 
 .sidebar > .dashboard-logo,
